@@ -38,7 +38,8 @@
               "field": "e_inc_100k",
               "type": "quantitative",
               "title": "Incidence Rate (per 100k)",
-              "scale": {"type": "linear"}
+              "scale": {"type": "linear"},
+              "legend": {"values": [0, 100, 200, 300, 400, 500, 600]}
             },  
             "tooltip": [
               {"field": "properties.NAME", "type": "nominal", "title": "Country"},
