@@ -1,10 +1,10 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "title": "Tuberculosis Incidence and Country GDP",
-    "width": 800,
-    "height": 400,
+    "width": "container",
+    "height": 300,
     "data": {
-      "url": "../data/Economy/tuberculosis_gdp_processed.csv"
+      "url": "https://raw.githubusercontent.com/ethan-lee-07/FIT3179/main/Week_10_Homework/data/Economy/tuberculosis_gdp_processed.csv"
     },
     "params": [
         {
