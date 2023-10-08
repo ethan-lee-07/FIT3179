@@ -1,0 +1,109 @@
+country,iso3,year,cases,disease
+Algeria,DZA,2021,0,Malaria
+Argentina,ARG,2021,0,Malaria
+Armenia,ARM,2021,0,Malaria
+Azerbaijan,AZE,2021,0,Malaria
+Belize,BLZ,2021,0,Malaria
+Cabo Verde,CPV,2021,0,Malaria
+China,CHN,2021,0,Malaria
+El Salvador,SLV,2021,0,Malaria
+Georgia,GEO,2021,0,Malaria
+Iran (Islamic Republic of),IRN,2021,0,Malaria
+Iraq,IRQ,2021,0,Malaria
+Kazakhstan,KAZ,2021,0,Malaria
+Kyrgyzstan,KGZ,2021,0,Malaria
+Malaysia,MYS,2021,0,Malaria
+Mauritius,MUS,2021,0,Malaria
+Morocco,MAR,2021,0,Malaria
+Oman,OMN,2021,0,Malaria
+Paraguay,PRY,2021,0,Malaria
+Saudi Arabia,SAU,2021,0,Malaria
+Sri Lanka,LKA,2021,0,Malaria
+Syrian Arab Republic,SYR,2021,0,Malaria
+Tajikistan,TJK,2021,0,Malaria
+Timor-Leste,TLS,2021,0,Malaria
+Türkiye,TUR,2021,0,Malaria
+Turkmenistan,TKM,2021,0,Malaria
+United Arab Emirates,ARE,2021,0,Malaria
+Uzbekistan,UZB,2021,0,Malaria
+Somalia,SOM,2021,1131892,Malaria
+Papua New Guinea,PNG,2021,1237112,Malaria
+Congo,COG,2021,1280047,Malaria
+Rwanda,RWA,2021,1700493,Malaria
+Central African Republic,CAF,2021,1826551,Malaria
+Liberia,LBR,2021,1852429,Malaria
+Mozambique,MOZ,2021,10283922,Malaria
+Comoros,COM,2021,10537,Malaria
+Philippines,PHL,2021,10609,Malaria
+Colombia,COL,2021,102418,Malaria
+Nepal,NPL,2021,106,Malaria
+Botswana,BWA,2021,1067,Malaria
+Uganda,UGA,2021,13023397,Malaria
+Bolivia (Plurinational State of),BOL,2021,14930,Malaria
+Guatemala,GTM,2021,1493,Malaria
+Solomon Islands,SLB,2021,151437,Malaria
+Brazil,BRA,2021,162016,Malaria
+Costa Rica,CRI,2021,189,Malaria
+Cambodia,KHM,2021,19064,Malaria
+Afghanistan,AFG,2021,193232,Malaria
+Togo,TGO,2021,2053345,Malaria
+Sierra Leone,SLE,2021,2777394,Malaria
+South Sudan,SSD,2021,2953582,Malaria
+Venezuela (Bolivarian Republic of),VEN,2021,204683,Malaria
+Namibia,NAM,2021,21322,Malaria
+Gambia,GMB,2021,213311,Malaria
+Guinea-Bissau,GNB,2021,216542,Malaria
+Ecuador,ECU,2021,2175,Malaria
+Suriname,SUR,2021,22,Malaria
+Haiti,HTI,2021,22546,Malaria
+Thailand,THA,2021,2219,Malaria
+Honduras,HND,2021,2290,Malaria
+Peru,PER,2021,23250,Malaria
+Democratic People's Republic of Korea,PRK,2021,2357,Malaria
+Mexico,MEX,2021,242,Malaria
+Guyana,GUY,2021,25792,Malaria
+Sao Tome and Principe,STP,2021,2719,Malaria
+Republic of Korea,KOR,2021,274,Malaria
+Nicaragua,NIC,2021,29457,Malaria
+Myanmar,MMR,2021,292857,Malaria
+South Africa,ZAF,2021,2958,Malaria
+Sudan,SDN,2021,3325874,Malaria
+Kenya,KEN,2021,3419698,Malaria
+Chad,TCD,2021,3506428,Malaria
+Zambia,ZMB,2021,3655518,Malaria
+Burundi,BDI,2021,3657985,Malaria
+Ethiopia,ETH,2021,3783896,Malaria
+Democratic Republic of the Congo,COD,2021,30518545,Malaria
+Eswatini,SWZ,2021,306,Malaria
+Zimbabwe,ZWE,2021,342543,Malaria
+Equatorial Guinea,GNQ,2021,348428,Malaria
+Dominican Republic,DOM,2021,378,Malaria
+India,IND,2021,4265027,Malaria
+Malawi,MWI,2021,4359158,Malaria
+Guinea,GIN,2021,4477687,Malaria
+Madagascar,MDG,2021,4911293,Malaria
+Benin,BEN,2021,4983668,Malaria
+Viet Nam,VNM,2021,453,Malaria
+Panama,PAN,2021,4585,Malaria
+Ghana,GHA,2021,5396652,Malaria
+Pakistan,PAK,2021,505620,Malaria
+Gabon,GAB,2021,535939,Malaria
+Vanuatu,VUT,2021,576,Malaria
+Djibouti,DJI,2021,58445,Malaria
+Cameroon,CMR,2021,6665957,Malaria
+Lao People's Democratic Republic,LAO,2021,6403,Malaria
+Nigeria,NGA,2021,65399501,Malaria
+Côte d’Ivoire,CIV,2021,7443146,Malaria
+Mali,MLI,2021,7744735,Malaria
+United Republic of Tanzania,TZA,2021,7997711,Malaria
+Niger,NER,2021,8166369,Malaria
+Burkina Faso,BFA,2021,8326915,Malaria
+Angola,AGO,2021,8794084,Malaria
+Indonesia,IDN,2021,811636,Malaria
+Mauritania,MRT,2021,85030,Malaria
+French Guiana,GUF,2021,86,Malaria
+Bangladesh,BGD,2021,8974,Malaria
+Bhutan,BTN,2021,9,Malaria
+Eritrea,ERI,2021,92898,Malaria
+Yemen,YEM,2021,979967,Malaria
+Senegal,SEN,2021,995763,Malaria

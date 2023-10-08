@@ -1,0 +1,166 @@
+country,iso3,year,cases,disease
+Andorra,AND,2021,0,Measles
+Antigua and Barbuda,ATG,2021,0,Measles
+Argentina,ARG,2021,0,Measles
+Armenia,ARM,2021,0,Measles
+Australia,AUS,2021,0,Measles
+Azerbaijan,AZE,2021,0,Measles
+Bahamas,BHS,2021,0,Measles
+Bahrain,BHR,2021,0,Measles
+Barbados,BRB,2021,0,Measles
+Belize,BLZ,2021,0,Measles
+Bolivia (Plurinational State of),BOL,2021,0,Measles
+Botswana,BWA,2021,0,Measles
+Brunei Darussalam,BRN,2021,0,Measles
+Bulgaria,BGR,2021,0,Measles
+Cabo Verde,CPV,2021,0,Measles
+Canada,CAN,2021,0,Measles
+Chile,CHL,2021,0,Measles
+Colombia,COL,2021,0,Measles
+Comoros,COM,2021,0,Measles
+Costa Rica,CRI,2021,0,Measles
+Croatia,HRV,2021,0,Measles
+Cuba,CUB,2021,0,Measles
+Czechia,CZE,2021,0,Measles
+Denmark,DNK,2021,0,Measles
+Djibouti,DJI,2021,0,Measles
+Dominica,DMA,2021,0,Measles
+Dominican Republic,DOM,2021,0,Measles
+Ecuador,ECU,2021,0,Measles
+Egypt,EGY,2021,0,Measles
+El Salvador,SLV,2021,0,Measles
+Estonia,EST,2021,0,Measles
+Gambia,GMB,2021,0,Measles
+Greece,GRC,2021,0,Measles
+Guatemala,GTM,2021,0,Measles
+Guyana,GUY,2021,0,Measles
+Haiti,HTI,2021,0,Measles
+Honduras,HND,2021,0,Measles
+Hungary,HUN,2021,0,Measles
+Iceland,ISL,2021,0,Measles
+Ireland,IRL,2021,0,Measles
+Israel,ISR,2021,0,Measles
+Jamaica,JAM,2021,0,Measles
+Latvia,LVA,2021,0,Measles
+Lithuania,LTU,2021,0,Measles
+Luxembourg,LUX,2021,0,Measles
+Maldives,MDV,2021,0,Measles
+Marshall Islands,MHL,2021,0,Measles
+Mauritius,MUS,2021,0,Measles
+Mexico,MEX,2021,0,Measles
+Monaco,MCO,2021,0,Measles
+Montenegro,MNE,2021,0,Measles
+Netherlands,NLD,2021,0,Measles
+New Zealand,NZL,2021,0,Measles
+Nicaragua,NIC,2021,0,Measles
+Norway,NOR,2021,0,Measles
+Oman,OMN,2021,0,Measles
+Panama,PAN,2021,0,Measles
+Papua New Guinea,PNG,2021,0,Measles
+Paraguay,PRY,2021,0,Measles
+Peru,PER,2021,0,Measles
+Portugal,PRT,2021,0,Measles
+Republic of Korea,KOR,2021,0,Measles
+Republic of Moldova,MDA,2021,0,Measles
+Saint Kitts and Nevis,KNA,2021,0,Measles
+Saint Lucia,LCA,2021,0,Measles
+Saint Vincent and the Grenadines,VCT,2021,0,Measles
+San Marino,SMR,2021,0,Measles
+Sao Tome and Principe,STP,2021,0,Measles
+Seychelles,SYC,2021,0,Measles
+Slovakia,SVK,2021,0,Measles
+Slovenia,SVN,2021,0,Measles
+Suriname,SUR,2021,0,Measles
+Sweden,SWE,2021,0,Measles
+Switzerland,CHE,2021,0,Measles
+Trinidad and Tobago,TTO,2021,0,Measles
+Turkmenistan,TKM,2021,0,Measles
+United Republic of Tanzania,TZA,2021,0,Measles
+Uruguay,URY,2021,0,Measles
+Uzbekistan,UZB,2021,0,Measles
+Vanuatu,VUT,2021,0,Measles
+Venezuela (Bolivarian Republic of),VEN,2021,0,Measles
+Austria,AUT,2021,1,Measles
+Cyprus,CYP,2021,1,Measles
+Kiribati,KIR,2021,1,Measles
+Malta,MLT,2021,1,Measles
+Qatar,QAT,2021,1,Measles
+The former Yugoslav Republic of Macedonia,MKD,2021,1,Measles
+Russian Federation,RUS,2021,1,Measles
+Serbia,SRB,2021,1,Measles
+Tajikistan,TJK,2021,10,Measles
+Pakistan,PAK,2021,10399,Measles
+Nigeria,NGA,2021,10649,Measles
+Iran (Islamic Republic of),IRN,2021,103,Measles
+Occupied Palestinian territory,PSE,2021,11,Measles
+Syrian Arab Republic,SYR,2021,11,Measles
+Malaysia,MYS,2021,128,Measles
+Poland,POL,2021,13,Measles
+Gabon,GAB,2021,134,Measles
+United States of America,USA,2021,14,Measles
+Nepal,NPL,2021,143,Measles
+France,FRA,2021,16,Measles
+Ukraine,UKR,2021,16,Measles
+Congo,COG,2021,160,Measles
+Viet Nam,VNM,2021,162,Measles
+Sierra Leone,SLE,2021,170,Measles
+Côte d’Ivoire,CIV,2021,1837,Measles
+Senegal,SEN,2021,187,Measles
+Ethiopia,ETH,2021,1953,Measles
+Iraq,IRQ,2021,197,Measles
+Kazakhstan,KAZ,2021,2,Measles
+Lao People's Democratic Republic,LAO,2021,2,Measles
+Romania,ROU,2021,2,Measles
+Spain,ESP,2021,2,Measles
+United Kingdom of Great Britain and Northern Ireland,GBR,2021,2,Measles
+Bangladesh,BGD,2021,203,Measles
+Philippines,PHL,2021,206,Measles
+Mali,MLI,2021,2074,Measles
+South Africa,ZAF,2021,21,Measles
+Mauritania,MRT,2021,249,Measles
+Eritrea,ERI,2021,25,Measles
+Liberia,LBR,2021,250,Measles
+Chad,TCD,2021,2577,Measles
+Kenya,KEN,2021,266,Measles
+Zimbabwe,ZWE,2021,282,Measles
+Central African Republic,CAF,2021,286,Measles
+Eswatini,SWZ,2021,29,Measles
+Afghanistan,AFG,2021,2900,Measles
+Belarus,BLR,2021,3,Measles
+Finland,FIN,2021,3,Measles
+Kuwait,KWT,2021,3,Measles
+Kyrgyzstan,KGZ,2021,3,Measles
+Samoa,WSM,2021,3,Measles
+Angola,AGO,2021,300,Measles
+Saudi Arabia,SAU,2021,338,Measles
+Benin,BEN,2021,35,Measles
+United Arab Emirates,ARE,2021,35,Measles
+Lesotho,LSO,2021,368,Measles
+Burundi,BDI,2021,369,Measles
+Indonesia,IDN,2021,394,Measles
+Namibia,NAM,2021,4,Measles
+Rwanda,RWA,2021,40,Measles
+Equatorial Guinea,GNQ,2021,43,Measles
+Madagascar,MDG,2021,44,Measles
+Yemen,YEM,2021,4904,Measles
+Cambodia,KHM,2021,5,Measles
+Georgia,GEO,2021,5,Measles
+Malawi,MWI,2021,5,Measles
+Guinea,GIN,2021,505,Measles
+Ghana,GHA,2021,52,Measles
+Democratic Republic of the Congo,COD,2021,54471,Measles
+Zambia,ZMB,2021,55,Measles
+China,CHN,2021,554,Measles
+India,IND,2021,5700,Measles
+Japan,JPN,2021,6,Measles
+Uganda,UGA,2021,606,Measles
+Mozambique,MOZ,2021,619,Measles
+Brazil,BRA,2021,668,Measles
+Belgium,BEL,2021,7,Measles
+Tunisia,TUN,2021,7,Measles
+Somalia,SOM,2021,7191,Measles
+Cameroon,CMR,2021,771,Measles
+Myanmar,MMR,2021,8,Measles
+Togo,TGO,2021,82,Measles
+Italy,ITA,2021,9,Measles
+Niger,NER,2021,9271,Measles
