@@ -26,7 +26,6 @@ body {
 
 #bubble_chart {
 	position: relative;
-	right: 30px;
 	top: 20px;
 	z-index: 0;
 }
