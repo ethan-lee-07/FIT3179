@@ -1,8 +1,8 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "title": "Tuberculosis, Malaria, and Measles: Incidence Rates (2021)",
-    "width": 800,
-    "height": 500,
+    "width": "container",
+    "height": 410,
     "params": [
         {
             "name": "disease_selection",
@@ -33,7 +33,7 @@
 
         {
             "data": {
-                "url": "ne_110m.json",
+                "url": "https://raw.githubusercontent.com/ethan-lee-07/FIT3179/main/Week_10_Homework/js/ne_110m.json",
                 "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
             },
             "transform": [
@@ -53,14 +53,14 @@
 
         {
             "data": {
-            "url": "../data/Disease/disease_incidence_processed.csv"
+            "url": "https://raw.githubusercontent.com/ethan-lee-07/FIT3179/main/Week_10_Homework/data/Disease/disease_incidence_processed.csv"
         },
           "transform": [
             {
               "lookup": "country",
               "from": {
                 "data": {
-                  "url": "ne_110m.json",
+                  "url": "https://raw.githubusercontent.com/ethan-lee-07/FIT3179/main/Week_10_Homework/js/ne_110m.json",
                   "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
                 },
                 "key": "properties.NAME"
@@ -95,7 +95,7 @@
 
         {
             "data": {
-            "url": "ne_110m.json",
+            "url": "https://raw.githubusercontent.com/ethan-lee-07/FIT3179/main/Week_10_Homework/js/ne_110m.json",
             "format": {"type": "topojson", "feature": "ne_110m_graticules_30"}
         },
         "mark": {
