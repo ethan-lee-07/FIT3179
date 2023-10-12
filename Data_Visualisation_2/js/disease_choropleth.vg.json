@@ -52,7 +52,7 @@
 
         {
             "data": {
-            "url": "https://raw.githubusercontent.com/ethan-lee-07/FIT3179/main/Week_10_Homework/data/Disease/disease_incidence_processed.csv"
+            "url": "https://raw.githubusercontent.com/ethan-lee-07/FIT3179/main/Data%20Visualisation%202/data/disease_incidence_processed.csv"
         },
           "transform": [
             {
