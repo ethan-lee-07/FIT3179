@@ -7,7 +7,7 @@
     "spec": {
         "projection": {"type": "equalEarth", "rotate": [-15, 0, 0]},
         "width": 400,
-        "height": 300,
+        "height": 250,
 
         "layer": [
             {
@@ -66,7 +66,8 @@
                         "type": "nominal",
                         "scale": {"domain": ["endemic", "polio-free (not certified)", "WHO Region certified polio-free"], "range": ["#f03b20", "#fad241", "#c6e5ef"]},
                         "legend": {
-                            "title": null                            
+                            "title": null,
+                            "orient": "bottom"                            
                         }
                     },
                     "tooltip": [
@@ -92,9 +93,10 @@
                 "mark": {
                     "type": "text",
                     "align": "left",
+                    "fontStyle": "bold",
                     "baseline": "bottom",
                     "x": 175,
-                    "y": 25
+                    "y": 0
                 },
                 "encoding": {"text": {"field": {"repeat": "repeat"}}}
             }            

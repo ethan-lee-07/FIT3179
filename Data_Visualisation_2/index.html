@@ -34,7 +34,7 @@
         }
 
         .page {
-            width: 850px;
+            width: 950px;
             background-color: white;
             margin: auto;
             padding: 70px;
@@ -51,12 +51,12 @@
             text-align: justify;
         }
         .description-left {
-            border: 2px solid #ccc;
+            /* border: 2px solid #ccc; */
             padding-right: 30px;
         }
 
         .description-right {
-            border: 2px solid #ccc;
+            /* border: 2px solid #ccc; */
             padding-left: 30px;
         }
 
@@ -65,6 +65,14 @@
         }
 
         #bubble_chart .vega-bindings {
+            font-size: small;
+        }
+
+        #line_chart {
+            padding-top: 20px;
+        }
+
+        #line_chart .vega-bindings {
             font-size: small;
         }
 
@@ -80,9 +88,17 @@
             bottom: 25px;
         }
  
+        #multiple_choropleth {
+            padding-top: 5px;
+            padding-bottom: 5px;
+            position: relative;
+            left: 55px;
+        }
 
         .pure-g {
-            border: 2px solid #000000;
+            padding-bottom: 30px;
+            border-bottom: 2px solid #00000035;
+            /* border: 2px solid #000000; */
         }
 
     </style>
@@ -118,7 +134,7 @@
         <!-- Viz 1 Description-->
         <div class="pure-g">
             <div class="pure-u-1-1">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eget vestibulum libero. Donec egestas pulvinar neque eget iaculis. Proin a nibh nec eros aliquam lacinia a a sem. Quisque condimentum, nulla euismod bibendum pretium, quam velit egestas massa, sed tristique neque massa id magna. Maecenas pellentesque erat gravida convallis tristique. Proin elementum gravida quam.
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eget vestibulum libero. Donec egestas pulvinar neque eget iaculis. Proin a nibh nec eros aliquam lacinia a a sem. Quisque condimentum, nulla euismod bibendum pretium, quam velit egestas massa, sed tristique neque massa id magna. Maecenas pellentesque erat gravida convallis tristique. Proin elementum gravida quam. 
                 </p>
             </div>
         </div>
@@ -129,13 +145,12 @@
             <div class="pure-u-1-2">
                 <div class="description description-left">
                     <h2>2 Column Heading</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eget vestibulum libero. Donec egestas pulvinar neque eget iaculis. Proin a nibh nec eros aliquam lacinia a a sem. Quisque condimentum, nulla euismod bibendum pretium, quam velit egestas massa, sed tristique neque massa id magna. Maecenas pellentesque erat gravida convallis tristique. Proin elementum gravida quam.
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eget vestibulum libero. Donec egestas pulvinar neque eget iaculis. Proin a nibh nec eros aliquam lacinia a a sem. Quisque condimentum, nulla euismod bibendum pretium, quam velit egestas massa, sed tristique neque massa id magna. Maecenas pellentesque erat gravida convallis tristique. Proin elementum gravida quam. Proin a nibh nec eros aliquam lacinia a a sem. Quisque condimentum, nulla euismod bibendum pretium, quam velit egestas massa, sed tristique neque massa id magna. Maecenas pellentesque erat gravida convallis tristique. Proin elementum gravida quam.
                     </p>
                 </div>
             </div>
             <div class="pure-u-1-2">
-                <h2>*Insert Viz* </h2>
-
+                <div id="bubble_chart" class="vis-container"></div>
             </div>
         </div>
         <!-- end pure grid group --> 
@@ -143,13 +158,13 @@
         <!-- Viz 3 and Description (2-column) -->
         <div class="pure-g">
             <div class="pure-u-1-2">
-                <div id="bubble_chart" class="vis-container"></div>
+                <div id="line_chart" class="vis-container"></div>
             </div>
 
             <div class="pure-u-1-2">
                 <div class="description description-right">
                     <h2>2 Column Heading</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eget vestibulum libero. Donec egestas pulvinar neque eget iaculis. Proin a nibh nec eros aliquam lacinia a a sem. Quisque condimentum, nulla euismod bibendum pretium, quam velit egestas massa, sed tristique neque massa id magna. Maecenas pellentesque erat gravida convallis tristique. Proin elementum gravida quam.
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eget vestibulum libero. Donec egestas pulvinar neque eget iaculis. Proin a nibh nec eros aliquam lacinia a a sem. Quisque condimentum, nulla euismod bibendum pretium, quam velit egestas massa, sed tristique neque massa id magna. Maecenas pellentesque erat gravida convallis tristique. Proin elementum gravida quam. Proin a nibh nec eros aliquam lacinia a a sem. Quisque condimentum, nulla euismod bibendum pretium, quam velit egestas massa, sed tristique neque massa id magna. Maecenas pellentesque erat gravida convallis tristique. Proin elementum gravida quam.
                     </p>
                 </div>
             </div>
@@ -157,19 +172,11 @@
         </div>
         <!-- end pure grid group --> 
 
-
-        <!-- pure grid group -->
-        <div class="pure-g">        
-            <div class="pure-u-1-3">
-                <div class="description description-right">
-                    <h2>Viz 2: Choropleth Map</h2>
-                    <p>This map highlights incidence rates of various diseases around the world in the year 2021.
-                        The drop-down filter (Disease Selection) selects the disease to be presented on the map.
-                    </p>
-                </div>
-            </div>
-            <div class="pure-u-2-3">
-                
+        <!-- Viz 4 -->
+        <div class="pure-g">
+            <div class="pure-u-1-1">
+                <h2>Polio: Progress towards Eradication</h2>
+                <div id="multiple_choropleth" class="vis-container"></div>
             </div>
         </div>
         <!-- end pure grid group -->

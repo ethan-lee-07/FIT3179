@@ -1,8 +1,8 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": "Dual-Axis Line Chart",
-    "width": 800,
-    "height": 400,
+    "title": "Polio: Cases and Immunisation Coverage",
+    "width": "container",
+    "height": 200,
     "data": {
         "url": "https://raw.githubusercontent.com/ethan-lee-07/FIT3179/main/Data_Visualisation_2/data/polio_combined_country_processed.csv"
     },

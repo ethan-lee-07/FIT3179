@@ -54,7 +54,7 @@
                 "color": {
                     "field": "continent",
                     "type": "nominal",
-                    "title": "Continent"
+                    "title": ["Continent", "(click to filter)"]
                 },
                 "size": {
                     "field": "population",
