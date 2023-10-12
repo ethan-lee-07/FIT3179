@@ -4,7 +4,7 @@
     "width": "container",
     "height": 200,
     "data": {
-      "url": "../data/Economy/tuberculosis_gdp_processed.csv"
+      "url": "https://raw.githubusercontent.com/ethan-lee-07/FIT3179/main/Data_Visualisation_2/data/tuberculosis_gdp_processed.csv"
     },
     "params": [
         {

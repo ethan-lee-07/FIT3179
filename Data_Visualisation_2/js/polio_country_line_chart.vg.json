@@ -4,7 +4,7 @@
     "width": 800,
     "height": 400,
     "data": {
-        "url": "../data/Disease/Polio/polio_combined_country_processed.csv"
+        "url": "https://raw.githubusercontent.com/ethan-lee-07/FIT3179/main/Data_Visualisation_2/data/polio_combined_country_processed.csv"
     },
     "params": [
         {
