@@ -1,0 +1,66 @@
+body *{
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+    font-weight: 900;
+}
+
+body {
+    background-color: lightgray;
+}
+
+.page {
+    width: 1400px;
+    background-color: white;
+    margin: auto;
+    padding: 50px;
+    padding-top: 35px;
+}
+
+.vis-container {
+	padding-top: 50px;
+    width: 100%;
+	height: 100%;
+}
+
+#bubble_chart {
+	position: relative;
+	top: 20px;
+	left: 20px;
+	z-index: 0;
+}
+
+#bubble_chart .vega-bindings {
+	font-size: small;
+	position: relative;
+	left: 380px;
+	top: 20px;
+}
+
+#choropleth_map {
+	border: 2px solid #ccc;
+}
+
+#choropleth_map .vega-bindings {
+	font-size: small;
+	position: relative;
+	left: 15px;
+	bottom: 415px;
+}
+
+.description {
+	position: relative;
+	line-height: 1.6;
+    padding: 20px;
+	z-index: 1;
+}
+
+
+.pure-g {
+	width: 100%;
+	height: 500px;
+    margin-bottom: 40px;
+	border: 2px solid #ccc;
+}
+

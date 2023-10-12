@@ -1,0 +1,120 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 600,
+    "height": 320,
+    "params": [
+        {
+            "name": "disease_selection",
+            "value": "Tuberculosis",
+            "bind": {
+                "input": "select",
+                "options": [
+                    "Tuberculosis",
+                    "Malaria",
+                    "Measles"
+                ],
+                "labels": [
+                    "Tuberculosis",
+                    "Malaria",
+                    "Measles"
+                ],
+                "name": "Disease Selection: "
+            }
+        }
+    ],
+    "projection": {"type": "equalEarth", "rotate": [-15, 0, 0]},
+    "layer": [
+        {
+            "data": {"values": [{"type": "Sphere"}]}, 
+            "mark": {"type": "geoshape"}, 
+            "encoding": {"color": {"value": "#d0e7f5"}}  
+        },
+
+        {
+            "data": {
+                "url": "https://raw.githubusercontent.com/ethan-lee-07/FIT3179/main/Week_10_Homework/js/ne_110m.json",
+                "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
+            },
+            "transform": [
+                {
+                "calculate": "'Data is not available in ' + datum.properties.NAME",
+                "as": "note"
+                }
+            ],
+            "mark": {
+                "type": "geoshape",
+                "fill": "lightgrey",
+                "stroke": "grey",
+                "strokeWidth": 0.5
+            },
+            "encoding": {"tooltip": {"field": "note"}}
+        },
+
+        {
+            "data": {
+            "url": "https://raw.githubusercontent.com/ethan-lee-07/FIT3179/main/Week_10_Homework/data/Disease/disease_incidence_processed.csv"
+        },
+          "transform": [
+            {
+              "lookup": "iso3",
+              "from": {
+                "data": {
+                  "url": "https://raw.githubusercontent.com/ethan-lee-07/FIT3179/main/Week_10_Homework/js/ne_110m.json",
+                  "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
+                },
+                "key": "properties.ISO_A3"
+              },
+              "as": "geo"
+            },
+            {"filter": "datum.disease == disease_selection"}
+          ],
+          "mark": {
+              "type": "geoshape",
+              "stroke": "grey",
+              "strokeWidth": 0.5
+          },
+          "encoding": {
+            "shape": {"field": "geo", "type": "geojson"},
+            "color": {
+              "field": "cases_per_100k",
+              "type": "quantitative",
+              "title": "Incidence Rate (per 100k)",
+              "scale": {"type": "linear", "range": ["#ffffb2", "#fd8d3c", "#bd0026"]},
+              "legend": {"tickCount": 5}
+            },
+            "tooltip": [
+              {"field": "country", "type": "nominal", "title": "Country"},
+              {"field": "disease", "type": "nominal", "title": "Disease"},
+              {"field": "cases_per_100k", "type": "quantitative", "title": "Incidence Rate (per 100k)", "format": ".2f"}
+            ]
+          }
+        },
+
+        
+
+        {
+            "data": {
+            "url": "https://raw.githubusercontent.com/ethan-lee-07/FIT3179/main/Week_10_Homework/js/ne_110m.json",
+            "format": {"type": "topojson", "feature": "ne_110m_graticules_30"}
+        },
+        "mark": {
+            "type": "geoshape", 
+            "fill": null, 
+            "stroke": "lightgray", 
+            "strokeWidth": 0.5
+        },
+        "encoding": {"opacity": {"value": 0.75}}
+
+        }
+
+    ],
+
+    "config": {
+      "style": {
+        "cell": {
+          "stroke": "transparent"
+        }
+      }
+    }
+
+}

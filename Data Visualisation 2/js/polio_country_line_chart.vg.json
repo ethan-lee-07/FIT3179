@@ -1,0 +1,103 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "Dual-Axis Line Chart",
+    "width": 800,
+    "height": 400,
+    "data": {
+        "url": "../data/Disease/Polio/polio_combined_country_processed.csv"
+    },
+    "params": [
+        {
+            "name": "country_selection",
+            "value": "Afghanistan",
+            "bind": {
+                "input": "select",
+                "options": [
+                    "Afghanistan",                
+                    "Angola",                
+                    "Brazil",                
+                    "China",                
+                    "Egypt",                
+                    "India",                
+                    "Indonesia",                                    
+                    "Kenya",
+                    "Lao People's Democratic Republic",                
+                    "Nigeria",                
+                    "Pakistan",                
+                    "Sudan",                
+                    "Viet Nam"],
+                "labels": [
+                    "Afghanistan",                
+                    "Angola",                
+                    "Brazil",                
+                    "China",                
+                    "Egypt",                
+                    "India",                
+                    "Indonesia",                                    
+                    "Kenya",
+                    "Lao People's Democratic Republic",                
+                    "Nigeria",                
+                    "Pakistan",                
+                    "Sudan",                
+                    "Vietnam"],
+                "name": "Country: "
+            }
+        }
+    ],
+
+    "transform": [
+        {"filter": "datum.country == country_selection"}
+    ],
+
+    "encoding": {
+        "x": {"field": "Year", "type": "quantitative", "title": "Year", "axis": {"format": "d", "tickCount": 10}},
+        "color": {
+            "type": "nominal",
+            "scale": {"domain": ["Case Numbers", "Immunisation Coverage"], "range": ["red", "blue"]}
+        }
+    },
+
+    "layer": [
+        {   
+            "mark": {"type": "line", "strokeWidth": 3},
+            "encoding": {
+                "y": {"field": "Cases", "type": "quantitative", "axis": {"title": "Cases"}},
+                "color": {"datum": "Case Numbers"},
+                "tooltip": [
+                    {"field": "country", "type": "nominal", "title": "Country"},
+                    {"field": "Year", "type": "quantitative", "title": "Year"},
+                    {"field": "Cases", "type": "nominal", "title": "Cases"}
+                ]
+            }
+        },
+        {
+            "transform": [{"filter": "datum.Coverage_Perc != 0"}],
+            "mark": {"type": "line", "strokeWidth": 3, "strokeDash": [6,4]},
+            "encoding": {
+                "y": {"field": "Coverage_Perc", "type": "quantitative", "axis": {"title": "Immunisation Coverage (% of one-year-olds)"}},
+                "color": {
+                    "datum": "Immunisation Coverage"
+                },
+                "tooltip": [
+                    {"field": "country", "type": "nominal", "title": "Country"},
+                    {"field": "Coverage_Perc", "type": "nominal", "title": "Immunisation Coverage (%)"}
+                ]
+            }
+        },
+        {
+            "mark": {"type": "line"},
+            "encoding": {
+                "opacity": {"value": 0}
+            }
+        }
+    ],
+    "resolve": {"scale": {"y": "independent"}},
+    
+    "config": {
+        "legend": {
+            "orient": "bottom-right"
+        }
+    }
+
+}
+
