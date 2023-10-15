@@ -1,5 +1,6 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "background": "white",
     "title": "Tuberculosis Incidence and Country GDP",
     "width": "container",
     "height": 250,
@@ -30,7 +31,7 @@
             "type": "quantitative",
             "title": "GDP per capita (constant 2017 international $)",
             "axis" : {"tickCount" : 10},
-            "scale" : {"type": "linear" , "domain" : [1 , 80000]}
+            "scale" : {"type": "linear" , "domain" : [1 , 75000]}
         },
         "y": {
             "field": "cases_per_100k",
@@ -51,6 +52,11 @@
             {
                 "name": "hover",
                 "select": {"type": "point", "on": "mouseover", "clear": "mouseout", "resolve": "global"}
+            },
+            {
+                "name": "grid",
+                "select": "interval",
+                "bind": "scales"
             }
 
         ],
@@ -77,9 +83,9 @@
                         "test": {
                             "and": [{"param": "continent_highlight"}, {"param": "hover"}]
                         },
-                    "value": 0.6
+                    "value": 0.65
                     },
-                    "value": 0.2
+                    "value": 0.15
                 },
                 "tooltip": [
                     {"field": "country", "type": "nominal", "title": "Country"},
@@ -92,14 +98,14 @@
         },
         {   
             "transform": [
-                {"filter": "datum.country == 'China' || datum.country == 'Mexico' || datum.country == 'Brazil' || datum.country == 'Nigeria' || datum.country == 'Russian Federation' || datum.country == 'Australia'"}
+                {"filter": "datum.country == 'China' || datum.country == 'India' || datum.country == 'Nigeria' || datum.country == 'Philippines' || datum.country == 'South Africa'"}
             ],
             "mark": {
                 "type" : "text" , 
-                "align" : "right" , 
-                "baseline" : "middle" , 
-                "dx" : -10 , 
-                "fontSize" : 11 , 
+                "align" : "left" , 
+                "baseline" : "middle", 
+                "dx" : 10, 
+                "fontSize" : 11, 
                 "fontStyle" : "italic" 
             },
             "encoding": {
@@ -123,5 +129,12 @@
                 ]
             }
         }
-    ]
+    ],
+    "config": {
+        "axis": {"labelFont": "Inter", "titleFont": "Inter"},
+        "legend": {"labelFont": "Inter", "titleFont": "Inter"},
+        "header": {"labelFont": "Inter", "titleFont": "Inter"},
+        "mark": {"font": "Inter"},
+        "title": {"font": "Inter", "subtitleFont": "Inter"}
+    }
   }

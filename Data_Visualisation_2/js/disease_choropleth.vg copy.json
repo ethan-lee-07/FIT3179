@@ -1,6 +1,6 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "background": "white",
+    "background": "#f6f4ef",
     "width": "container",
     "height": 320,
     "params": [
@@ -82,11 +82,11 @@
             "encoding": {
                 "shape": {"field": "geo", "type": "geojson"},
                 "color": {
-                    "field": "cases_per_100k",
-                    "type": "quantitative",
-                    "title": "Incidence Rate (per 100k)",
-                    "scale": {"type": "linear", "range": ["#ffffb2", "#fd8d3c", "#bd0026"]},
-                    "legend": {"tickCount": 5}
+                "field": "cases_per_100k",
+                "type": "quantitative",
+                "title": "Incidence Rate (per 100k)",
+                "scale": {"type": "linear", "range": ["#ffffb2", "#fd8d3c", "#bd0026"]},
+                "legend": {"tickCount": 5}
                 },
                 "tooltip": [
                 {"field": "country", "type": "nominal", "title": "Country"},
@@ -96,6 +96,42 @@
                 "opacity": {"condition": {"param": "hover", "value": 1}, "value": 0.7},
                 "stroke": {"condition": {"param": "hover", "empty": false, "value": "black"}, "value": "grey"},
                 "strokeWidth": {"condition": {"param": "hover", "empty": false, "value": 1.5}, "value": 0.5}
+            }
+        },
+
+        {
+            "data": {
+            "url": "https://raw.githubusercontent.com/ethan-lee-07/FIT3179/main/Data_Visualisation_2/data/disease_incidence_processed.csv"
+            },
+            "transform": [
+                {
+                "lookup": "iso3",
+                "from": {
+                    "data": {
+                    "url": "https://raw.githubusercontent.com/ethan-lee-07/FIT3179/main/Data_Visualisation_2/js/ne_110m.json",
+                    "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
+                    },
+                    "key": "properties.ISO_A3",
+                    "fields": ["properties.LABEL_X", "properties.LABEL_Y"]
+                }
+                },
+                {"filter": "datum.disease == disease_selection"},
+                {
+                    "window": [{"op": "rank", "as": "ranking"}],
+                    "sort": [{"field": "cases_per_100k", "order": "descending"}]
+                },
+                {"filter": "datum.ranking == 1"}
+            ],
+            "mark": {
+                "type": "text",
+                "align": "right",
+                "baseline": "middle",
+                "fontStyle": "italic"
+            },
+            "encoding": {
+                "text": {"field": "cases_per_100k", "type": "nominal"},
+                "longitude": {"field": "properties.LABEL_X", "type": "quantitative"},
+                "latitude": {"field": "properties.LABEL_Y", "type": "quantitative"}
             }
         },
 
@@ -121,12 +157,7 @@
             "cell": {
                 "stroke": "transparent"
             }
-        },
-        "axis": {"labelFont": "Inter", "titleFont": "Inter"},
-        "legend": {"labelFont": "Inter", "titleFont": "Inter"},
-        "header": {"labelFont": "Inter", "titleFont": "Inter"},
-        "mark": {"font": "Inter"},
-        "title": {"font": "Inter", "subtitleFont": "Inter"}
+        }
     }
 
 }

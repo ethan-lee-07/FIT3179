@@ -12,6 +12,11 @@
     integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <!-- Import fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Open+Sans&family=Roboto&family=Rubik:wght@500..800&display=swap" rel="stylesheet">
+
     <script src="js/vega_lite_vis.js"></script>
     
     <!-- CSS file -->
@@ -20,24 +25,26 @@
 
     <!-- custom style -->
     <style>
-        body *{
-            font-family: 'Open Sans', sans-serif;
-        }
 
         h1 {
-            font-weight: 900;
+            font-family: 'Rubik', sans-serif;
+            font-weight: 600;
+            font-size: 3pc;
         }
 
         h2 {
+            font-family: 'Rubik', sans-serif;
+            font-weight: 500;
             text-align: left;
         }
+        
         body {
             background-color: lightgray;
         }
 
         .page {
-            width: 950px;
-            background-color: white;
+            width: 1000px;
+            background-color: #ffffff;
             margin: auto;
             padding: 70px;
             padding-top: 35px;
@@ -50,32 +57,23 @@
         }
 
         .description {
+            font-family: 'Inter', sans-serif;
             text-align: justify;
+            line-height: 125%; 
+            font-size: 95%;
         }
         .description-left {
             /* border: 2px solid #ccc; */
             padding-right: 30px;
         }
-
         .description-right {
             /* border: 2px solid #ccc; */
             padding-left: 30px;
         }
 
-        #bubble_chart {
-            padding-top: 20px;
-        }
-
-        #bubble_chart .vega-bindings {
+        .sources {
             font-size: small;
-        }
-
-        #line_chart {
-            padding-top: 20px;
-        }
-
-        #line_chart .vega-bindings {
-            font-size: small;
+            color: grey;
         }
 
         #choropleth_map {
@@ -84,6 +82,7 @@
         }
         
         #choropleth_map .vega-bindings {
+            font-family: 'Inter', sans-serif;
             font-size: smaller;
             position: relative;
             left: 810px;
@@ -92,20 +91,46 @@
 
         #choropleth_map .vega-bindings select[name="disease_selection"] {
             position: relative;
-            right: 115px;
+            right: 120px;
             top: 20px;
+        }
+
+        #bubble_chart {
+            
+            width: 96%;
+            padding-top: 20px;
+            padding-left: 22px;
+        }
+
+        #bubble_chart .vega-bindings {
+            font-family: 'Inter', sans-serif;
+            font-size: small;
+            position: relative;
+            left: 20px;
+            top: 5px;
+        }
+
+        #line_chart {
+            width: 96%;
+            padding-top: 20px;
+        }
+
+        #line_chart .vega-bindings {
+            font-family: 'Inter', sans-serif;
+            font-size: small;
         }
  
         #multiple_choropleth {
             padding-top: 5px;
             padding-bottom: 5px;
             position: relative;
-            left: 55px;
+            left: 75px;
         }
 
         .pure-g {
-            padding-bottom: 30px;
-            border-bottom: 2px solid #00000035;
+            padding-top: 15px;
+            padding-bottom: 25px;
+            border-bottom: 2px solid #00000011;
             /* border: 2px solid #000000; */
         }
 
@@ -117,14 +142,17 @@
 
     <div class="page">
 
-        
         <!-- Title and subtitle -->
         <div class="pure-g">
             <div class="pure-u-1-1">
                 <h1>Exploring Communicable Diseases</h1>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eget vestibulum libero. Donec egestas pulvinar neque eget iaculis. Proin a nibh nec eros aliquam lacinia a a sem. Quisque condimentum, nulla euismod bibendum pretium, quam velit egestas massa, sed tristique neque massa id magna. Maecenas pellentesque erat gravida convallis tristique. Proin elementum gravida quam. Proin interdum dolor in tortor dictum ullamcorper. In nibh turpis, varius eu leo ac, pellentesque fringilla turpis. Pellentesque mauris ipsum, congue quis mauris commodo, faucibus tristique mauris. Curabitur interdum scelerisque nunc in facilisis. Vivamus rhoncus eget dui congue ultricies. Suspendisse non consectetur orci. Integer posuere nunc eget tortor maximus rutrum. Donec laoreet volutpat tellus, eu tincidunt felis aliquet sit amet. Nunc at aliquet quam. Ut ut porttitor tortor, nec euismod dolor.
-                </p>
+                <div class="description">
+                    <p>Communicable diseases, commonly known as infectious diseases, are illnesses that can spread from one person to another, from animals to humans, or through environmental factors such as contaminated water or food. Communicable diseases, particularly those which are more severe, including HIV/AIDS, tuberculosis (TB), malaria, sexually transmitted infections and neglected tropical diseases (NTDs), are among the leading causes of death and disability in low-income countries and marginalised populations. This project aims to explore the scale of communicable diseases around the world, along with other various aspects to contribute to the global understanding and collaborative efforts needed to combat these health challenges effectively.
+                    </p>
+                    <p class="sources"> 
+                        Source: World Health Organization ()
+                    </p>
+                </div>
             </div>
         </div>
         <!-- end pure grid group -->
@@ -142,8 +170,10 @@
         <!-- Viz 1 Description-->
         <div class="pure-g">
             <div class="pure-u-1-1">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eget vestibulum libero. Donec egestas pulvinar neque eget iaculis. Proin a nibh nec eros aliquam lacinia a a sem. Quisque condimentum, nulla euismod bibendum pretium, quam velit egestas massa, sed tristique neque massa id magna. Maecenas pellentesque erat gravida convallis tristique. Proin elementum gravida quam. 
-                </p>
+                <div class="description">
+                    <p>Tuberculosis, malaria, and measles continue to exert a significant global health burden. With 1.5 million annual deaths, TB stands as the world's second most lethal infectious disease, second only to Covid-19. In 2021, malaria claimed 619,000 lives, with children under 5 years of age accounting for a staggering 77% of these deaths. Measles, though largely preventable through vaccination, continues to affect populations worldwide. These statistics underscore the pressing need for continued efforts to combat these diseases, particularly among vulnerable and younger populations.
+                    </p>
+                </div>
             </div>
         </div>
         <!-- end pure grid group -->
@@ -152,8 +182,8 @@
         <div class="pure-g">
             <div class="pure-u-1-2">
                 <div class="description description-left">
-                    <h2>Disease Prevalence: The Economic Factor</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eget vestibulum libero. Donec egestas pulvinar neque eget iaculis. Proin a nibh nec eros aliquam lacinia a a sem. Quisque condimentum, nulla euismod bibendum pretium, quam velit egestas massa, sed tristique neque massa id magna. Maecenas pellentesque erat gravida convallis tristique. Proin elementum gravida quam. Proin a nibh nec eros aliquam lacinia a a sem. Quisque condimentum, nulla euismod bibendum pretium, quam velit egestas massa, sed tristique neque massa id magna. Maecenas pellentesque erat gravida convallis tristique. Proin elementum gravida quam.
+                    <h2>Socioeconomic Determinants of Disease</h2>
+                    <p>The socioeconomic condition of a population plays a pivotal role in the landscape of disease incidence. Poverty, in particular, exerts a significant influence on disease prevalence. For example, the chart on the right illustrates a negative correlation between a country's TB incidence rate and its GDP per capita. Overcrowded and poorly ventilated living and working conditions, often associated with poverty, create an ideal environment for TB transmission. Malnutrition, common in impoverished communities, heightens the risk of developing active TB disease. Therefore, addressing poverty is a vital strategy for reducing TB transmission and the progression from infection to disease. It also improves access to healthcare services and enhances adherence to recommended treatment, ultimately contributing to disease containment.
                     </p>
                 </div>
             </div>
@@ -172,7 +202,7 @@
             <div class="pure-u-1-2">
                 <div class="description description-right">
                     <h2>The Eradication of Polio</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eget vestibulum libero. Donec egestas pulvinar neque eget iaculis. Proin a nibh nec eros aliquam lacinia a a sem. Quisque condimentum, nulla euismod bibendum pretium, quam velit egestas massa, sed tristique neque massa id magna. Maecenas pellentesque erat gravida convallis tristique. Proin elementum gravida quam. Proin a nibh nec eros aliquam lacinia a a sem. Quisque condimentum, nulla euismod bibendum pretium, quam velit egestas massa, sed tristique neque massa id magna. Maecenas pellentesque erat gravida convallis tristique. Proin elementum gravida quam.
+                    <p>Immunisations are a cornerstone of public health, effectively countering the spread of infectious diseases. Over the decades, vaccination efforts have led to a substantial decline in polio cases, illustrating the transformative impact of immunisation on public health. The chart on the left, tracking the most polio-infected countries and their cases, along with the progression of immunisation coverage over the past few decades, showcases the impact of vaccines. This chart not only highlights the effectiveness of immunisations but also commends the global commitment to achieving a polio-free world, setting a precedent for the potential eradication of other infectious diseases through targeted vaccination strategies.
                     </p>
                 </div>
             </div>
@@ -192,8 +222,11 @@
         <!-- Viz 4 Description -->
         <div class="pure-g">
             <div class="pure-u-1-1">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eget vestibulum libero. Donec egestas pulvinar neque eget iaculis. Proin a nibh nec eros aliquam lacinia a a sem. Quisque condimentum, nulla euismod bibendum pretium, quam velit egestas massa, sed tristique neque massa id magna. Maecenas pellentesque erat gravida convallis tristique. Proin elementum gravida quam. Proin a nibh nec eros aliquam lacinia a a sem. Quisque condimentum, nulla euismod bibendum pretium, quam velit egestas massa, sed tristique neque massa id magna. Maecenas pellentesque erat gravida convallis tristique. Proin elementum gravida quam.
-                </p>
+                <div class="description">
+                    <p>The global eradication of polio stands as a remarkable achievement in the realm of public health. In 1988, the World Health Assembly launched the Global Polio Eradication Initiative, aiming to eliminate this disease entirely. At the program's inception, polio was present in more than 125 countries and paralysed around 1,000 children per day. The small multiples above provide a visual journey through the progress of polio eradication across the globe. Today, wild polio remains only in two countries: Afghanistan and Pakistan.
+                    </p>
+                </div>
+                
             </div>
         </div>
         <!-- end pure grid group -->

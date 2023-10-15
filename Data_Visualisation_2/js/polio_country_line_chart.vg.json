@@ -1,8 +1,9 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "background": "white",
     "title": "Polio: Cases and Immunisation Coverage",
     "width": "container",
-    "height": 200,
+    "height": 220,
     "data": {
         "url": "https://raw.githubusercontent.com/ethan-lee-07/FIT3179/main/Data_Visualisation_2/data/polio_combined_country_processed.csv"
     },
@@ -59,6 +60,7 @@
 
     "layer": [
         {   
+            "description": "Red line corresponding to cases",
             "mark": {"type": "line", "strokeWidth": 3},
             "encoding": {
                 "y": {"field": "Cases", "type": "quantitative", "axis": {"title": "Cases"}},
@@ -68,6 +70,31 @@
                     {"field": "Year", "type": "quantitative", "title": "Year"},
                     {"field": "Cases", "type": "nominal", "title": "Cases"}
                 ]
+            }
+        },
+        {
+            "description": "Interactive point mark along red line",
+            "params": [{
+              "name": "label",
+              "select": {
+                "type": "point",
+                "encodings": ["x"],
+                "nearest": true,
+                "on": "mouseover",
+                "resolve": "intersect"
+              }
+            }],
+            "mark": "point",
+            "encoding": {
+                "y": {"field": "Cases", "type": "quantitative", "axis": null},
+                "opacity": {
+                    "condition": {
+                    "param": "label",
+                    "empty": false,
+                    "value": 1
+                    },
+                    "value": 0
+                }
             }
         },
         {
@@ -85,18 +112,43 @@
             }
         },
         {
-            "mark": {"type": "line"},
+            "description": "Interactive point mark along blue line",
+            "params": [{
+              "name": "tracking2",
+              "select": {
+                "type": "point",
+                "encodings": ["x"],
+                "nearest": true,
+                "on": "mouseover",
+                "resolve": "intersect"
+              }
+            }],
+            "mark": "point",
             "encoding": {
-                "opacity": {"value": 0}
+                "y": {"field": "Coverage_Perc", "type": "quantitative", "axis": null},
+                "opacity": {
+                    "condition": {
+                    "param": "tracking2",
+                    "empty": false,
+                    "value": 1
+                    },
+                    "value": 0
+                }
             }
         }
     ],
     "resolve": {"scale": {"y": "independent"}},
     
     "config": {
+        "axis": {"labelFont": "Inter", "titleFont": "Inter"},
         "legend": {
-            "orient": "bottom-right"
-        }
+            "orient": "bottom-right",
+            "labelFont": "Inter", 
+            "titleFont": "Inter"
+        },
+        "header": {"labelFont": "Inter", "titleFont": "Inter"},
+        "mark": {"font": "Inter"},
+        "title": {"font": "Inter", "subtitleFont": "Inter"}
     }
 
 }
