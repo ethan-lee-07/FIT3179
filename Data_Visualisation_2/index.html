@@ -29,7 +29,7 @@
         h1 {
             font-family: 'Rubik', sans-serif;
             font-weight: 600;
-            font-size: 3pc;
+            font-size: 36pt;
         }
 
         h2 {
@@ -72,8 +72,20 @@
         }
 
         .sources {
-            font-size: small;
-            color: grey;
+            font-family: 'Inter', sans-serif;
+            font-size: 7pt;
+            text-align: left;
+            line-height: 100%;
+            color: rgb(144, 144, 144);
+        }
+
+        .authorship {
+            font-family: 'Inter', sans-serif;
+            font-size: 7pt;
+            text-align: right;
+            line-height: 120%;
+            color: rgb(144, 144, 144);
+            padding-bottom: 0;
         }
 
         #choropleth_map {
@@ -83,10 +95,14 @@
         
         #choropleth_map .vega-bindings {
             font-family: 'Inter', sans-serif;
-            font-size: smaller;
+            font-size: 10pt;
             position: relative;
-            left: 810px;
-            bottom: 90px;
+            left: 745px;
+            bottom: 50px;
+        }
+
+        #choropleth_map .vega-bind-name {
+            font-weight: bold;
         }
 
         #choropleth_map .vega-bindings select[name="disease_selection"] {
@@ -119,6 +135,10 @@
             font-family: 'Inter', sans-serif;
             font-size: small;
         }
+
+        #line_chart .vega-bind-name {
+            font-weight: bold;
+        }
  
         #multiple_choropleth {
             padding-top: 5px;
@@ -150,7 +170,8 @@
                     <p>Communicable diseases, commonly known as infectious diseases, are illnesses that can spread from one person to another, from animals to humans, or through environmental factors such as contaminated water or food. Communicable diseases, particularly those which are more severe, including HIV/AIDS, tuberculosis (TB), malaria, sexually transmitted infections and neglected tropical diseases (NTDs), are among the leading causes of death and disability in low-income countries and marginalised populations. This project aims to explore the scale of communicable diseases around the world, along with other various aspects to contribute to the global understanding and collaborative efforts needed to combat these health challenges effectively.
                     </p>
                     <p class="sources"> 
-                        Source: World Health Organization ()
+                        Source:<br>
+                        World Health Organization (https://www.who.int/our-work/communicable-and-noncommunicable-diseases-and-mental-health)
                     </p>
                 </div>
             </div>
@@ -173,6 +194,11 @@
                 <div class="description">
                     <p>Tuberculosis, malaria, and measles continue to exert a significant global health burden. With 1.5 million annual deaths, TB stands as the world's second most lethal infectious disease, second only to Covid-19. In 2021, malaria claimed 619,000 lives, with children under 5 years of age accounting for a staggering 77% of these deaths. Measles, though largely preventable through vaccination, continues to affect populations worldwide. These statistics underscore the pressing need for continued efforts to combat these diseases, particularly among vulnerable and younger populations.
                     </p>
+                    <p class="sources"> 
+                        Sources:<br>
+                        World Health Organization (https://www.who.int/our-work/communicable-and-noncommunicable-diseases-and-mental-health),<br>
+                        UNICEF (https://data.unicef.org/topic/child-health/malaria/)
+                    </p>
                 </div>
             </div>
         </div>
@@ -184,6 +210,10 @@
                 <div class="description description-left">
                     <h2>Socioeconomic Determinants of Disease</h2>
                     <p>The socioeconomic condition of a population plays a pivotal role in the landscape of disease incidence. Poverty, in particular, exerts a significant influence on disease prevalence. For example, the chart on the right illustrates a negative correlation between a country's TB incidence rate and its GDP per capita. Overcrowded and poorly ventilated living and working conditions, often associated with poverty, create an ideal environment for TB transmission. Malnutrition, common in impoverished communities, heightens the risk of developing active TB disease. Therefore, addressing poverty is a vital strategy for reducing TB transmission and the progression from infection to disease. It also improves access to healthcare services and enhances adherence to recommended treatment, ultimately contributing to disease containment.
+                    </p>
+                    <p class="sources"> 
+                        Source:<br> 
+                        TB Alert (https://www.tbalert.org/about-tb/global-tb-challenges/tb-poverty/)
                     </p>
                 </div>
             </div>
@@ -201,7 +231,7 @@
 
             <div class="pure-u-1-2">
                 <div class="description description-right">
-                    <h2>The Eradication of Polio</h2>
+                    <h2>Immunisation</h2>
                     <p>Immunisations are a cornerstone of public health, effectively countering the spread of infectious diseases. Over the decades, vaccination efforts have led to a substantial decline in polio cases, illustrating the transformative impact of immunisation on public health. The chart on the left, tracking the most polio-infected countries and their cases, along with the progression of immunisation coverage over the past few decades, showcases the impact of vaccines. This chart not only highlights the effectiveness of immunisations but also commends the global commitment to achieving a polio-free world, setting a precedent for the potential eradication of other infectious diseases through targeted vaccination strategies.
                     </p>
                 </div>
@@ -225,11 +255,21 @@
                 <div class="description">
                     <p>The global eradication of polio stands as a remarkable achievement in the realm of public health. In 1988, the World Health Assembly launched the Global Polio Eradication Initiative, aiming to eliminate this disease entirely. At the program's inception, polio was present in more than 125 countries and paralysed around 1,000 children per day. The small multiples above provide a visual journey through the progress of polio eradication across the globe. Today, wild polio remains only in two countries: Afghanistan and Pakistan.
                     </p>
+                    <p class="sources"> 
+                        Source:<br>
+                        Bill & Melinda Gates Foundation (https://www.gatesfoundation.org/our-work/programs/global-development/polio)
+                    </p>
                 </div>
                 
             </div>
         </div>
         <!-- end pure grid group -->
+
+        <p class="authorship">
+            Author: Ethan Lee<br>
+            Organisation: Monash University<br>
+            Date: 15/10/2023
+        </p>
 
     </div>
 
